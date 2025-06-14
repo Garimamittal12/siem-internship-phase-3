@@ -9,31 +9,31 @@ In Phase 3 of the SIEM Internship, the objective was to simulate **Advanced Pers
 
 ## 🧪 Tasks Performed
 
-### ✅ 1. Fileless Malware via PowerShell
+### 1. Fileless Malware via PowerShell
 - **Simulation**: Emulated a spear-phishing scenario that led to the remote execution of a malicious PowerShell payload.
 - **Detection**:
   - Detected using **Sysmon Event ID 1 (Process Creation)** and **ID 10 (Script Events)**.
   - Obfuscated PowerShell and Base64 payload analysis performed.
 
-### ✅ 2. Lateral Movement via RDP Brute Force
+### 2. Lateral Movement via RDP Brute Force
 - **Simulation**: Low-privileged user used stolen credentials to brute-force RDP across servers.
 - **Detection**:
   - Used `netstat`, `quser`, and `Sysmon Event ID 3 (Network Connections)`.
   - Brute-force login pattern identified via login attempt logs.
 
-### ✅ 3. Persistence via Registry Run Keys
+### 3. Persistence via Registry Run Keys
 - **Simulation**: Registry keys were modified to maintain persistence on reboot.
 - **Detection**:
   - Investigated changes using **Autoruns** and **Sysmon Event ID 13**.
   - Registry key path monitoring and modification alerts set up.
 
-### ✅ 4. DNS Tunneling
+### 4. DNS Tunneling
 - **Simulation**: Data was exfiltrated through DNS subdomain queries using encoded payloads.
 - **Detection**:
   - Monitored outbound DNS traffic using **Wireshark** and **Zeek**.
   - Detected unusual domain length and entropy.
 
-### ✅ 5. Credential Dumping via Mimikatz
+### 5. Credential Dumping via Mimikatz
 - **Simulation**: Mimikatz used to dump credentials from LSASS and exfiltrate over HTTPS.
 - **Detection**:
   - Detected using **Sysmon**, **Winlogbeat**, and **Sigma rules** for credential access.
